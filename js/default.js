@@ -80,6 +80,10 @@ function addObjectsToScene(){     // Add your objects here
       extrudeMaterial: 1
     }
   );
+  helloWorldGeometry.computeBoundingBox();
+  var hwbb = helloWorldGeometry.boundingBox;
+  var hwbbx = -0.5*(hwbb.max.x - hwbb.min.x);
+  var hwbby = -0.5*(hwbb.max.y - hwbb.min.y);
   var helloWorldMaterial = new THREE.MeshFaceMaterial(
     [ 
       new THREE.MeshPhongMaterial(
