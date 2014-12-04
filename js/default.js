@@ -15,7 +15,7 @@ window.onload = function (){
 function Init(){
   scene = new THREE.Scene();
 
-   // camera setup
+  // camera setup
   camera = new LeiaCamera();
   camera.position.copy(new THREE.Vector3(_camPosition.x, _camPosition.y, _camPosition.z));
   camera.lookAt(new THREE.Vector3(_tarPosition.x, _tarPosition.y, _tarPosition.z));
@@ -80,6 +80,7 @@ function addObjectsToScene(){     // Add your objects here
       extrudeMaterial: 1
     }
   );
+  var hwbb = helloWorldGeometry.boundingBox;
   var helloWorldMaterial = new THREE.MeshFaceMaterial(
     [ 
       new THREE.MeshPhongMaterial(
