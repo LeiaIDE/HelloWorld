@@ -103,7 +103,8 @@ function addObjectsToScene(){     // Add your objects here
   scene.add(helloWorldMesh);  
 }
 
-function addLights(){     //Add Lights Here
+function addLights(){    
+   //Add Lights Here
  	var spotLight = new THREE.SpotLight( 0xffffff);
  	spotLight.position.set(0,60,60);
     spotLight.shadowCameraVisible = false;
