@@ -9,14 +9,39 @@ window.onload = function (){
  };
 
 function Init(){
-    scene = new THREE.Scene();
-var lf= "helvetiker"; 
-var helloWorldGeometry = 0;
-helloWorldGeometry = new THREE.TextGeometry( 'Hello World', {size: 12, height: 2, curveSegments: 4, font: lf, weight: "normal", style: "normal", bevelThickness: 0.5, bevelSize: 0.25, bevelEnabled: true, material: 0, extrudeMaterial: 1 });
-var material = new THREE.MeshFaceMaterial( [ 
-  new THREE.MeshPhongMaterial( { color: 0xffffff, shading: THREE.FlatShading } ), // front
-  new THREE.MeshPhongMaterial( { color: 0xffffff, shading: THREE.SmoothShading } ) // side
-] );
+  scene = new THREE.Scene();
+  var helloWorldGeometry = new THREE.TextGeometry(
+    "Hello World",
+    {
+      size: 12,
+      height: 2,
+      curveSegments: 4,
+      font: "helvetiker",
+      weight: "normal",
+      style: "normal",
+      bevelThickness: 0.5,
+      bevelSize: 0.25,
+      bevelEnabled: true,
+      material: 0,
+      extrudeMaterial: 1
+    }
+  );
+  var material = new THREE.MeshFaceMaterial(
+    [ 
+      new THREE.MeshPhongMaterial(
+        {
+          color: 0xffffff,
+          shading: THREE.FlatShading
+        }
+      ), // front
+      new THREE.MeshPhongMaterial(
+        {
+          color: 0xffffff,
+          shading: THREE.SmoothShading
+        }
+      ) // side
+    ]
+  );
 var helloWorldMesh = new THREE.Mesh( helloWorldGeometry, material );
 scene.add(helloWorldMesh);
   
@@ -76,12 +101,12 @@ function addLights(){
 }
 
 function LEIA_setBackgroundPlane(filename, aspect){
-	var foregroundPlaneTexture = new THREE.ImageUtils.loadTexture( filename );
-	foregroundPlaneTexture.wrapS = foregroundPlaneTexture.wrapT = THREE.RepeatWrapping; 
-	foregroundPlaneTexture.repeat.set( 1, 1 );
+	var planeTexture = new THREE.ImageUtils.loadTexture( filename );
+	planeTexture.wrapS = planeTexture.wrapT = THREE.RepeatWrapping; 
+	planeTexture.repeat.set( 1, 1 );
 	
   //
-    var planeMaterial = new THREE.MeshPhongMaterial( {map: foregroundPlaneTexture, color: 0xffdd99 } );
+    var planeMaterial = new THREE.MeshPhongMaterial( {map: planeTexture, color: 0xffdd99 } );
     var planeGeometry = new THREE.PlaneGeometry(80, 60, 10, 10);
 	plane = new THREE.Mesh(planeGeometry,   planeMaterial);
 	plane.position.z = -6;
