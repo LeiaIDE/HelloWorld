@@ -1,12 +1,16 @@
 var windowWidth = window.innerWidth, windowHeight = window.innerHeight;
 var camera,renderer,scene;
+
+// add your global variables here:
 var helloWorldMesh;
+
 
 window.onload = function (){
      console.log("onload");
      Init();
      animate();
  };
+
 
 function Init(){
   scene = new THREE.Scene();
