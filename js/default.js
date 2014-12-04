@@ -42,33 +42,34 @@ function Init(){
       ) // side
     ]
   );
-var helloWorldMesh = new THREE.Mesh( helloWorldGeometry, material );
-scene.add(helloWorldMesh);
+  var helloWorldMesh = new THREE.Mesh( helloWorldGeometry, material );
+  scene.add(helloWorldMesh);
   
-       //setup camera
- 		camera = new LeiaCamera();
-        camera.position.copy(new THREE.Vector3(_camPosition.x, _camPosition.y, _camPosition.z));
-        camera.lookAt(new THREE.Vector3(_tarPosition.x, _tarPosition.y, _tarPosition.z));
-        scene.add(camera);
+
+  //setup camera
+  camera = new LeiaCamera();
+  camera.position.copy(new THREE.Vector3(_camPosition.x, _camPosition.y, _camPosition.z));
+  camera.lookAt(new THREE.Vector3(_tarPosition.x, _tarPosition.y, _tarPosition.z));
+  scene.add(camera);
   
-       //setup rendering parameter
- 		renderer = new LeiaWebGLRenderer({
-         antialias:true, 
- 		renderMode: _renderMode, 
-		shaderMode: _nShaderMode,
-          colorMode: _colorMode,
-		devicePixelRatio: 1 
-        } );
- 		renderer.Leia_setSize( windowWidth, 0.75*windowWidth );
-        renderer.shadowMapEnabled = true;
-		renderer.shadowMapSoft = true;
- 		document.body.appendChild( renderer.domElement );
+  //setup rendering parameter
+  renderer = new LeiaWebGLRenderer({
+    antialias:true, 
+    renderMode: _renderMode, 
+    shaderMode: _nShaderMode,
+    colorMode: _colorMode,
+    devicePixelRatio: 1 
+  });
+  renderer.Leia_setSize( windowWidth, 0.75*windowWidth );
+  renderer.shadowMapEnabled = true;
+  renderer.shadowMapSoft = true;
+  document.body.appendChild( renderer.domElement );
   
-       //add object to Scene
-        addObjectsToScene();
+  //add object to Scene
+  addObjectsToScene();
   
-        //add Light
- 		addLights();
+  //add Light
+  addLights();
  }
 
  function animate() 
