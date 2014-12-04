@@ -49,7 +49,6 @@ function animate()
   renderer.Leia_render(scene, camera, undefined, undefined, _holoScreenSize, _camFov, _messageFlag);
 }
   
-
 function addObjectsToScene(){     // Add your objects here
 
   // background Plane
