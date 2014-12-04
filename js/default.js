@@ -48,7 +48,6 @@ function animate()
 }
   
 function addObjectsToScene(){     // Add your objects here
-
   // background Plane
   var planeTexture = new THREE.ImageUtils.loadTexture( 'resource/brickwall_900x600_small.jpg' );
   planeTexture.wrapS = planeTexture.wrapT = THREE.RepeatWrapping; 
