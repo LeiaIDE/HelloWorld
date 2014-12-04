@@ -15,13 +15,13 @@ window.onload = function (){
 function Init(){
   scene = new THREE.Scene();
 
-  //setup camera
+  // camera setup
   camera = new LeiaCamera();
   camera.position.copy(new THREE.Vector3(_camPosition.x, _camPosition.y, _camPosition.z));
   camera.lookAt(new THREE.Vector3(_tarPosition.x, _tarPosition.y, _tarPosition.z));
   scene.add(camera);
   
-  //setup rendering parameter
+  // rendering setup
   renderer = new LeiaWebGLRenderer({
     antialias:true, 
     renderMode: _renderMode, 
@@ -34,7 +34,7 @@ function Init(){
   renderer.shadowMapSoft = true;
   document.body.appendChild( renderer.domElement );
   
-  //add object to Scene
+  //add object to scene
   addObjectsToScene();
   
   //add Light
@@ -49,8 +49,7 @@ function animate()
 }
   
 
-function addObjectsToScene(){
-  //Add your objects here
+function addObjectsToScene(){     // Add your objects here
 
   // background Plane
   var planeTexture = new THREE.ImageUtils.loadTexture( 'resource/brickwall_900x600_small.jpg' );
@@ -98,12 +97,12 @@ function addObjectsToScene(){
     ]
   );
   var helloWorldMesh = new THREE.Mesh( helloWorldGeometry, helloWorldMaterial );
+  helloWorldMesh.castShadow = true;
   helloWorldMesh.position.z = 10;
   scene.add(helloWorldMesh);  
 }
 
-function addLights(){
-    //Add Lights Here
+function addLights(){     //Add Lights Here
  	var spotLight = new THREE.SpotLight( 0xffffff);
  	spotLight.position.set(0,60,60);
     spotLight.shadowCameraVisible = false;
