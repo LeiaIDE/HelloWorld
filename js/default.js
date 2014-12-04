@@ -106,7 +106,7 @@ function addObjectsToScene(){     // Add your objects here
 function addLights(){    
    //Add Lights Here
  	var spotLight = new THREE.SpotLight( 0xffffff);
- 	spotLight.position.set(0,60,60);
+ 	spotLight.position.set(0,0,60);
     spotLight.shadowCameraVisible = false;
     spotLight.castShadow = true;
     spotLight.shadowMapWidth = spotLight.shadowMapHeight = 512;
