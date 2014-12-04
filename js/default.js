@@ -13,7 +13,7 @@ window.onload = function (){
 
 
 function Init(){
-  scene = new THREE.Scene();
+  scene = new THREE.Scene();d
 
   // camera setup
   camera = new LeiaCamera();
@@ -80,7 +80,6 @@ function addObjectsToScene(){     // Add your objects here
       extrudeMaterial: 1
     }
   );
-  var hwbb = helloWorldGeometry.boundingBox;
   var helloWorldMaterial = new THREE.MeshFaceMaterial(
     [ 
       new THREE.MeshPhongMaterial(
