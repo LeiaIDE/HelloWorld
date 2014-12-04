@@ -13,7 +13,7 @@ window.onload = function (){
 
 
 function Init(){
-  scene = new THREE.Scene();d
+  scene = new THREE.Scene();
 
   // camera setup
   camera = new LeiaCamera();
@@ -98,7 +98,7 @@ function addObjectsToScene(){     // Add your objects here
   );
   var helloWorldMesh = new THREE.Mesh( helloWorldGeometry, helloWorldMaterial );
   helloWorldMesh.castShadow = true;
-  helloWorldMesh.position.z = 10;
+  helloWorldMesh.position.set(hwbbx, hwbby, 0);
   scene.add(helloWorldMesh);  
 }
 
