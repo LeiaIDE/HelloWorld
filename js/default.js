@@ -67,7 +67,7 @@ function addObjectsToScene(){     // Add your objects here
   var helloWorldGeometry = new THREE.TextGeometry(
     "Hello World",
     {
-      size: 12,
+      size: 9,
       height: 2,
       curveSegments: 4,
       font: "helvetiker",
