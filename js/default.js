@@ -10,7 +10,6 @@ window.onload = function (){
      animate();
  };
 
-
 function Init(){
   scene = new THREE.Scene();
 
