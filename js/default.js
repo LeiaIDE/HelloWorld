@@ -44,7 +44,13 @@ function animate()
 {
   requestAnimationFrame( animate );
   renderer.setClearColor(new THREE.Color().setRGB(1.0, 1.0, 1.0)); 
-  renderer.Leia_render(scene, camera, undefined, undefined, _holoScreenSize, _camFov, _messageFlag);
+  renderer.Leia_render({
+     scene:scene, 
+     camera:camera,
+     holoScreenSize:_holoScreenSize,
+     holoCamFov:_camFov,
+     messageFlag:_messageFlag
+   });
 }
   
 function addObjectsToScene(){     // Add your objects here
