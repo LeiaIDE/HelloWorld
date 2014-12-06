@@ -43,6 +43,7 @@ function Init() {
 
 function animate() {
     requestAnimationFrame(animate);
+
     renderer.setClearColor(new THREE.Color().setRGB(1.0, 1.0, 1.0));
     renderer.Leia_render({
         scene: scene,
@@ -101,7 +102,7 @@ function addObjectsToScene() { // Add your objects here
             }) // side
         ]
     );
-    var helloWorldMesh = new THREE.Mesh(helloWorldGeometry, helloWorldMaterial);
+    helloWorldMesh = new THREE.Mesh(helloWorldGeometry, helloWorldMaterial);
     helloWorldMesh.castShadow = true;
     helloWorldMesh.position.set(hwbbx, hwbby, 0);
     scene.add(helloWorldMesh);
