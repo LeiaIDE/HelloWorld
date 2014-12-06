@@ -4,7 +4,7 @@ var camera, renderer, scene;
 
 // add your global variables here:
   var helloWorld = new THREE.Object3D();
-
+// test 
 window.onload = function() {
     console.log("onload");
     Init();
