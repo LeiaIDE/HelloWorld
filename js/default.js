@@ -43,7 +43,7 @@ function Init() {
 
 function animate() {
     requestAnimationFrame(animate);
-//    helloWorldMesh.position.z = Math.sin(Date.now() * 0.005);
+    helloWorld.position.z = Math.sin(Date.now() * 0.005);
 
     renderer.setClearColor(new THREE.Color().setRGB(1.0, 1.0, 1.0));
     renderer.Leia_render({
