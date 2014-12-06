@@ -15,7 +15,7 @@ function Init() {
     scene = new THREE.Scene();
 
     // camera setup
-    camera = new LeiaCamera({
+    camera = new LeiaCamera({ 
         cameraPosition: new THREE.Vector3(_camPosition.x, _camPosition.y, _camPosition.z),
         targetPosition: new THREE.Vector3(_tarPosition.x, _tarPosition.y, _tarPosition.z)
     });
