@@ -41,7 +41,7 @@ function Init() {
     addLights();
 }
 
-function animate() {
+function animate() { 
     requestAnimationFrame(animate);
 //    helloWorld.position.z = Math.sin(Date.now() * 0.005);
 
