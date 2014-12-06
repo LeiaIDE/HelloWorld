@@ -3,7 +3,7 @@ var windowWidth = window.innerWidth,
 var camera, renderer, scene;
 
 // add your global variables here:
-//var helloWorld = new THREE.Group();
+  var helloWorld = new THREE.Object3D();
 
 window.onload = function() {
     console.log("onload");
@@ -107,7 +107,8 @@ function addObjectsToScene() { // Add your objects here
     var helloWorldMesh = new THREE.Mesh(helloWorldGeometry, helloWorldMaterial);
     helloWorldMesh.castShadow = true;
     helloWorldMesh.position.set(hwbbx, hwbby, hwbbz);
-    scene.add(helloWorldMesh);
+    helloWorld.add(helloWorldMesh);
+    scene.add(helloWorld);
 }
 
 function addLights() {
