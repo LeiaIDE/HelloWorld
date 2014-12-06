@@ -86,7 +86,7 @@ function addObjectsToScene() { // Add your objects here
             material: 0,
             extrudeMaterial: 1
         }
-    );
+    ); 
     helloWorldGeometry.computeBoundingBox();
     var hwbb = helloWorldGeometry.boundingBox;
     var hwbbx = -0.5 * (hwbb.max.x - hwbb.min.x);
