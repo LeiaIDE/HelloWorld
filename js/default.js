@@ -1,4 +1,4 @@
-var windowWidth = window.innerWidth,
+var windowWidth = window.innerWidth, 
     windowHeight = window.innerHeight;
 var camera, renderer, scene;
 
