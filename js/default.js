@@ -3,7 +3,7 @@ var windowWidth = window.innerWidth,
 var camera, renderer, scene;
 
 // add your global variables here:
-var helloWorldMesh;
+//var helloWorld = new THREE.Group();
 
 window.onload = function() {
     console.log("onload");
@@ -43,6 +43,7 @@ function Init() {
 
 function animate() {
     requestAnimationFrame(animate);
+//    helloWorldMesh.position.z = Math.sin(Date.now() * 0.005);
 
     renderer.setClearColor(new THREE.Color().setRGB(1.0, 1.0, 1.0));
     renderer.Leia_render({
@@ -90,6 +91,7 @@ function addObjectsToScene() { // Add your objects here
     var hwbb = helloWorldGeometry.boundingBox;
     var hwbbx = -0.5 * (hwbb.max.x - hwbb.min.x);
     var hwbby = -0.5 * (hwbb.max.y - hwbb.min.y);
+    var hwbbz = -0.5 * (hwbb.max.z - hwbb.min.z);
     var helloWorldMaterial = new THREE.MeshFaceMaterial(
         [
             new THREE.MeshPhongMaterial({
@@ -102,9 +104,9 @@ function addObjectsToScene() { // Add your objects here
             }) // side
         ]
     );
-    helloWorldMesh = new THREE.Mesh(helloWorldGeometry, helloWorldMaterial);
+    var helloWorldMesh = new THREE.Mesh(helloWorldGeometry, helloWorldMaterial);
     helloWorldMesh.castShadow = true;
-    helloWorldMesh.position.set(hwbbx, hwbby, 0);
+    helloWorldMesh.position.set(hwbbx, hwbby, hwbbz);
     scene.add(helloWorldMesh);
 }
 
