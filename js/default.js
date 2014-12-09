@@ -3,10 +3,11 @@ var windowWidth = window.innerWidth,
 var camera, renderer, scene;
 
 // add your global variables here:
-  var helloWorld = new THREE.Object3D();
+  var helloWorld;
 
 window.onload = function() {
     console.log("onload");
+    helloWorld = new THREE.Object3D();
     Init();
     animate();
 };
