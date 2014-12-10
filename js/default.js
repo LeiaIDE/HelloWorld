@@ -6,7 +6,6 @@ var camera, renderer, scene;
   var helloWorld;
 
 window.onload = function() {
-    console.log("onload");
     helloWorld = new THREE.Object3D();
     Init();
     animate();
