@@ -29,7 +29,7 @@ function Init() {
         colorMode: _colorMode,
         devicePixelRatio: 1
     });
-    renderer.Leia_setSize(windowWidth, 0.75 * windowWidth);
+    renderer.Leia_setSize(windowWidth, windowHeight);
     renderer.shadowMapEnabled = true;
     renderer.shadowMapSoft = true;
     document.body.appendChild(renderer.domElement);
