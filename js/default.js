@@ -119,7 +119,7 @@ function addLights() {
     spotLight.position.set(0, 0, 70);
     spotLight.shadowCameraVisible = false;
     spotLight.castShadow = true;
-    spotLight.shadowMapWidth = spotLight.shadowMapHeight = 512;
+    spotLight.shadowMapWidth = spotLight.shadowMapHeight = 256;
     spotLight.shadowDarkness = 0.7;
     scene.add(spotLight);
 
