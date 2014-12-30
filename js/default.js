@@ -31,7 +31,8 @@ function Init() {
     });
   renderer.Leia_setSize({width: windowWidth,
                          height:windowHeight,
-                         autoFit:true});
+                         autoFit:true
+                        });
     renderer.shadowMapEnabled = true;
     renderer.shadowMapSoft = true;
     document.body.appendChild(renderer.domElement);
