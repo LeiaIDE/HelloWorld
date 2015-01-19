@@ -1,9 +1,7 @@
-var windowWidth = window.innerWidth, 
-    windowHeight = window.innerHeight;
 var camera, renderer, scene;
 
 // add your global variables here:
-  var helloWorld;
+var helloWorld;
 
 window.onload = function() {
     helloWorld = new THREE.Object3D();
@@ -15,7 +13,7 @@ function Init() {
     scene = new THREE.Scene();
 
     // camera setup
-    camera = new LeiaCamera({ 
+    camera = new LeiaCamera({
         cameraPosition: new THREE.Vector3(_camPosition.x, _camPosition.y, _camPosition.z),
         targetPosition: new THREE.Vector3(_tarPosition.x, _tarPosition.y, _tarPosition.z)
     });
@@ -29,13 +27,9 @@ function Init() {
         colorMode: _colorMode,
         devicePixelRatio: 1
     });
-  renderer.Leia_setSize({width: windowWidth,
-                         height:windowHeight,
-                         autoFit:true
-                        });
     renderer.shadowMapEnabled = true;
     renderer.shadowMapSoft = true;
-    document.body.appendChild(renderer.domElement);
+    Leia_addRender(renderer);
 
     //add object to scene
     addObjectsToScene();
@@ -44,9 +38,9 @@ function Init() {
     addLights();
 }
 
-function animate() { 
+function animate() {
     requestAnimationFrame(animate);
-//    helloWorld.position.z = Math.sin(Date.now() * 0.005);
+    //    helloWorld.position.z = Math.sin(Date.now() * 0.005);
 
     renderer.setClearColor(new THREE.Color().setRGB(1.0, 1.0, 1.0));
     renderer.Leia_render({
@@ -55,22 +49,18 @@ function animate() {
         holoScreenSize: _holoScreenSize,
         holoCamFov: _camFov,
         upclip: _up,
-        downclip:  _down,
-        messageFlag: _messageFlag 
+        downclip: _down,
+        messageFlag: _messageFlag
     });
 }
 
 function addObjectsToScene() { // Add your objects here
     // background Plane
-    var planeTexture = new THREE.ImageUtils.loadTexture('resource/brickwall_900x600_small.jpg');
-    planeTexture.wrapS = planeTexture.wrapT = THREE.RepeatWrapping;
-    planeTexture.repeat.set(1, 1);
-    var planeMaterial = new THREE.MeshPhongMaterial({
-        map: planeTexture,
-        color: 0xffdd99
+    var plane = Leia_createTexturePlane({
+        filename: 'resource/brickwall_900x600_small.jpg',
+        width: 80,
+        height: 60
     });
-    var planeGeometry = new THREE.PlaneGeometry(80, 60, 10, 10);
-    plane = new THREE.Mesh(planeGeometry, planeMaterial);
     plane.position.z = -6;
     plane.castShadow = false;
     plane.receiveShadow = true;
@@ -91,7 +81,7 @@ function addObjectsToScene() { // Add your objects here
             material: 0,
             extrudeMaterial: 1
         }
-    ); 
+    );
     helloWorldGeometry.computeBoundingBox();
     var hwbb = helloWorldGeometry.boundingBox;
     var hwbbx = -0.5 * (hwbb.max.x - hwbb.min.x);
