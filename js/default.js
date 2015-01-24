@@ -72,7 +72,7 @@ function addObjectsToScene() { // Add your objects here
         "Hello World", {
             size: 9,
             height: 2,
-            curveSegments: 4,
+            curveSegments: 1,
             font: "helvetiker",
             weight: "normal",
             style: "normal",
@@ -90,11 +90,11 @@ function addObjectsToScene() { // Add your objects here
     var hwbbz = -0.5 * (hwbb.max.z - hwbb.min.z);
     var helloWorldMaterial = new THREE.MeshFaceMaterial(
         [
-            new THREE.MeshPhongMaterial({
+            new THREE.MeshLambertMaterial({
                 color: 0xffffff,
                 shading: THREE.FlatShading
             }), // front
-            new THREE.MeshPhongMaterial({
+            new THREE.MeshLambertMaterial({
                 color: 0xffffff,
                 shading: THREE.SmoothShading
             }) // side
