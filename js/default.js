@@ -28,7 +28,8 @@ function Init() {
         devicePixelRatio: 1
     });
     renderer.shadowMapEnabled = true;
-    renderer.shadowMapSoft = true;
+   // renderer.shadowMapSoft = true;
+  renderer.shadowMapType = THREE.BasicShadowMap;
   Leia_addRender(renderer,{bFPSVisible:true});
 
     //add object to scene
