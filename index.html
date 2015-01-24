@@ -24,6 +24,10 @@
         var _down = -32.96;
         var _colorMode = "color";
     </script>
+    <script src="js/head.load.min.js"></script>
+    <script>
+        head.load("js/three.min.js", "https://s3.amazonaws.com/leiacore/LeiaCore-latest.min.js", "js/helvetiker_bold.typeface.js", "js/helvetiker_regular.typeface.js");
+    </script>
     <style type="text/css">
         body {
             overflow: hidden;
@@ -36,12 +40,7 @@
     <div id="pitch" style="display: none;">0</div>
     <div id="roll" style="display: none;">0</div>
 </body>
-<!--add library here-->
-<script src="js/three.min.js"></script>
-<!--<script src="https://s3.amazonaws.com/leiacore/LeiaCore-latest.min.js"></script>  -->
-<script src="js/LeiaCore-0.0.55.min.js"></script>
-<script src="js/helvetiker_bold.typeface.js"></script>
-<script src="js/helvetiker_regular.typeface.js"></script>
+
 <script src="js/default.js"></script>
 
 </html>
