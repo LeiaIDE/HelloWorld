@@ -12,6 +12,10 @@ head.ready(function() {
 function Init() {
     scene = new THREE.Scene();
 
+    //manually setup distance, zdp orientation
+    _camPosition = {x:0.00,y:0.00,z:500.00};
+    _tarPosition = {x:0.00,y:0.00,z:0.00};
+  
     // camera setup
     camera = new LeiaCamera({
         cameraPosition: new THREE.Vector3(_camPosition.x, _camPosition.y, _camPosition.z),
@@ -28,9 +32,10 @@ function Init() {
         devicePixelRatio: 1
     });
     renderer.shadowMapEnabled = true;
-   // renderer.shadowMapSoft = true;
+    renderer.shadowMapType = THREE.BasicShadowMap;
+  
+  //manually set width/height ratio
   Leia_setDeviceResolution(200,200);
-  renderer.shadowMapType = THREE.BasicShadowMap;
   
   Leia_addRender(renderer,{bFPSVisible:true});
 
@@ -47,6 +52,7 @@ function animate() {
   //manually setting baselinescale,_maxDisparity
   _baselineScale = 1.0;
   _maxDisparity = 5;
+  _holoScreenSize = 80;
 
   renderer.Leia_render({
         scene: scene,
