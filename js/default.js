@@ -19,6 +19,8 @@ function Init() {
     _baselineScale = 1.1;
     _maxDisparity = 5;
     _holoScreenSize = 82;
+    //manually set width/height ratio
+     Leia_setDeviceResolution(200,200);
   
     // camera setup
     camera = new LeiaCamera({
@@ -38,8 +40,7 @@ function Init() {
     renderer.shadowMapEnabled = true;
     renderer.shadowMapType = THREE.BasicShadowMap;
   
-  //manually set width/height ratio
-  Leia_setDeviceResolution(200,200);
+  
   
   Leia_addRender(renderer,{bFPSVisible:true});
 
