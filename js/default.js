@@ -51,7 +51,6 @@ function Init() {
 
 function animate() {
   requestAnimationFrame(animate);
-  console.log(_holoScreenSize);
   renderer.Leia_render({
         scene: scene,
         camera: camera
