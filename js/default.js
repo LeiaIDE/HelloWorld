@@ -4,7 +4,6 @@ var camera, renderer, scene;
 var helloWorld;
 
 head.ready(function() {
-   
     helloWorld = new THREE.Object3D();
     Init();
     animate();
@@ -44,11 +43,11 @@ function Init() {
 
 function animate() {
     requestAnimationFrame(animate);
-    //    helloWorld.position.z = Math.sin(Date.now() * 0.005);
-  _baselineScale = 2.0;
- _maxDisparity = 16.62;
-    renderer.setClearColor(new THREE.Color().setRGB(1.0, 1.0, 1.0));
- // _maxDisparity = 5; 
+   
+  //manually setting baselinescale,_maxDisparity
+  _baselineScale = 1.0;
+  _maxDisparity = 5;
+
   renderer.Leia_render({
         scene: scene,
         camera: camera,
