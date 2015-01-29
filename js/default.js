@@ -14,7 +14,11 @@ function Init() {
 
     //manually setup distance, zdp orientation
     _camPosition = {x:0.00,y:0.00,z:500.00};
-    _tarPosition = {x:0.00,y:0.00,z:0.00};
+    _tarPosition = {x:0.00,y:0.00,z:1.00};
+    //manually setting baselinescale,_maxDisparity
+    _baselineScale = 1.1;
+    _maxDisparity = 5;
+    _holoScreenSize = 82;
   
     // camera setup
     camera = new LeiaCamera({
@@ -47,13 +51,8 @@ function Init() {
 }
 
 function animate() {
-    requestAnimationFrame(animate);
-   
-  //manually setting baselinescale,_maxDisparity
-  _baselineScale = 1.0;
-  _maxDisparity = 5;
-  _holoScreenSize = 80;
-
+  requestAnimationFrame(animate);
+  console.log(_holoScreenSize);
   renderer.Leia_render({
         scene: scene,
         camera: camera,
