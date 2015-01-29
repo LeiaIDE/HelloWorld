@@ -39,10 +39,7 @@ function Init() {
     });
     renderer.shadowMapEnabled = true;
     renderer.shadowMapType = THREE.BasicShadowMap;
-  
-  
-  
-  Leia_addRender(renderer,{bFPSVisible:true});
+    Leia_addRender(renderer,{bFPSVisible:true});
 
     //add object to scene
     addObjectsToScene();
