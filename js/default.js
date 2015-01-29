@@ -4,8 +4,7 @@ var camera, renderer, scene;
 var helloWorld;
 
 head.ready(function() {
-    LEIA.DeviceResolutionWidth = 200;
-    LEIA.DeviceResolutionHeight = 200;
+   
     helloWorld = new THREE.Object3D();
     Init();
     animate();
@@ -31,6 +30,7 @@ function Init() {
     });
     renderer.shadowMapEnabled = true;
    // renderer.shadowMapSoft = true;
+  Leia_setDeviceResolution(200,200);
   renderer.shadowMapType = THREE.BasicShadowMap;
   
   Leia_addRender(renderer,{bFPSVisible:true});
@@ -64,7 +64,7 @@ function addObjectsToScene() { // Add your objects here
     var plane = Leia_createTexturePlane({
         filename: 'resource/brickwall_900x600_small.jpg',
         width: 80,
-        height: 60
+        height: 80
     });
     plane.position.z = -6;
     plane.castShadow = false;
