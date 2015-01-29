@@ -34,7 +34,11 @@ function Init() {
         antialias: true,
         renderMode: _renderMode,
         colorMode: _colorMode,
-        devicePixelRatio: 1
+        devicePixelRatio: 1,
+        holoScreenSize: _holoScreenSize,
+        tunedsp:_maxDisparity,
+        holoBaseLineScale:_baselineScale,
+        messageFlag: _messageFlag
     });
     renderer.shadowMapEnabled = true;
     renderer.shadowMapType = THREE.BasicShadowMap;
@@ -52,11 +56,7 @@ function animate() {
   console.log(_holoScreenSize);
   renderer.Leia_render({
         scene: scene,
-        camera: camera,
-        holoScreenSize: _holoScreenSize,
-        tunedsp:_maxDisparity,
-        holoBaseLineScale:_baselineScale,
-        messageFlag: _messageFlag
+        camera: camera
     });
 }
 
