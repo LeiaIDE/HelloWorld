@@ -4,6 +4,8 @@ var camera, renderer, scene;
 var helloWorld;
 
 head.ready(function() {
+    LEIA.DeviceResolutionWidth = 200;
+    LEIA.DeviceResolutionHeight = 200;
     helloWorld = new THREE.Object3D();
     Init();
     animate();
@@ -30,6 +32,7 @@ function Init() {
     renderer.shadowMapEnabled = true;
    // renderer.shadowMapSoft = true;
   renderer.shadowMapType = THREE.BasicShadowMap;
+  
   Leia_addRender(renderer,{bFPSVisible:true});
 
     //add object to scene
@@ -42,9 +45,10 @@ function Init() {
 function animate() {
     requestAnimationFrame(animate);
     //    helloWorld.position.z = Math.sin(Date.now() * 0.005);
-
+  _baselineScale = 2.0;
+ _maxDisparity = 16.62;
     renderer.setClearColor(new THREE.Color().setRGB(1.0, 1.0, 1.0));
-  _maxDisparity = 5; 
+ // _maxDisparity = 5; 
   renderer.Leia_render({
         scene: scene,
         camera: camera,
