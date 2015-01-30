@@ -17,13 +17,13 @@ function Init() {
     _tarPosition = {x:0.00,y:0.00,z:0.00};
     _baselineScale = 1.0;
     _maxDisparity = 5;
-    _holoScreenSize = 40;
+    _ZDPSize = 40;
      Leia_setDeviceResolution(200,200);
   
     // camera setup
     camera = new LeiaCamera({
         cameraPosition: new THREE.Vector3(_camPosition.x, _camPosition.y, _camPosition.z),
-        targetPosition: new THREE.Vector3(_tarPosition.x, _tarPosition.y, _tarPosition.z)
+        targetPosition: new THREE.Vector3(_ZDPCenter.x, _ZDPCenter.y, _ZDPCenter.z)
     });
     scene.add(camera);
 
@@ -33,7 +33,7 @@ function Init() {
         renderMode: _renderMode,
         colorMode: _colorMode,
         devicePixelRatio: 1,
-        holoScreenSize: _holoScreenSize,
+        holoScreenSize: _ZDPSize,
         tunedsp:_maxDisparity,
         holoBaseLineScale:_baselineScale,
         messageFlag: _messageFlag
