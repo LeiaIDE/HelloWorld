@@ -17,7 +17,7 @@ function Init() {
     _tarPosition = {x:0.00,y:0.00,z:0.00};
     _baselineScale = 1.0;
     _maxDisparity = 5;
-    _holoScreenSize = 80;
+    _holoScreenSize = 40;
      Leia_setDeviceResolution(200,200);
   
     // camera setup
@@ -61,8 +61,8 @@ function addObjectsToScene() { // Add your objects here
     // background Plane
     var plane = Leia_createTexturePlane({
         filename: 'resource/brickwall_900x600_small.jpg',
-        width: 80,
-        height: 80
+        width: 40,
+        height: 40
     });
     plane.position.z = -6;
     plane.castShadow = false;
@@ -72,7 +72,7 @@ function addObjectsToScene() { // Add your objects here
     // hello world text
     var helloWorldGeometry = new THREE.TextGeometry(
         "Hello World", {
-            size: 9,
+            size: 4,
             height: 2,
             curveSegments: 1,
             font: "helvetiker",
