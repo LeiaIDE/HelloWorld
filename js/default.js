@@ -36,7 +36,7 @@ function Init() {
         holoScreenSize: _ZDPSize,
         tunedsp:_maxDisparity,
         holoBaseLineScale:_baselineScale,
-        messageFlag: _messageFlag
+        messageFlag: _targetEnvironment
     });
     renderer.shadowMapEnabled = true;
     renderer.shadowMapType = THREE.BasicShadowMap;
