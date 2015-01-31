@@ -19,7 +19,6 @@ function Init() {
      //   _ZDPSize = 40.00;
      //    _maxDisparity = 5.00;
      //    _baselineScale = 1.00;
-
      Leia_setDeviceResolution(200,150);
     //Leia_resetScreenObjectParameters();
   
