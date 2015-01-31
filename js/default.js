@@ -40,7 +40,7 @@ function Init() {
         messageFlag: _targetEnvironment
     });
     renderer.shadowMapEnabled = true;
-    renderer.shadowMapType = THREE.BasicShadowMap;
+   // renderer.shadowMapType = THREE.BasicShadowMap;
     Leia_addRender(renderer,{bFPSVisible:true});
 
     //add object to scene
