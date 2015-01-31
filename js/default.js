@@ -13,8 +13,12 @@ function Init() {
     scene = new THREE.Scene();
 
     //manually setup distance, zdp orientation,baseline scale etc
-   // _camPosition = {x:0.00,y:0.00,z:500.00};
-   // _tarPosition = {x:0.00,y:0.00,z:0.00};
+     //   _ZDPNormal = {x:0.00,y:0.00,z:1.00};
+     //    _ZDPDistanceToCamera = 500.00;
+     //   _ZDPCenter = {x:0.00,y:0.00,z:0.00};
+     //   _ZDPSize = 40.00;
+     //    _maxDisparity = 5.00;
+     //    _baselineScale = 1.00;
 
      Leia_setDeviceResolution(200,150);
     //Leia_resetScreenObjectParameters();
