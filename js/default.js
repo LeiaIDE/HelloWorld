@@ -22,7 +22,7 @@ function Init() {
   
     // camera setup
     camera = new LeiaCamera({
-      dCtoZDP:_d,
+      dCtoZDP:_ZDPDistanceToCamera,
       zdpNormal:new THREE.Vector3(_ZDPNormal.x, _ZDPNormal.y, _ZDPNormal.z),
         targetPosition: new THREE.Vector3(_ZDPCenter.x, _ZDPCenter.y, _ZDPCenter.z)
     });
