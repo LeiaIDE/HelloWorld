@@ -96,11 +96,11 @@ function addObjectsToScene() { // Add your objects here
     var hwbbz = -0.5 * (hwbb.max.z - hwbb.min.z);
     var helloWorldMaterial = new THREE.MeshFaceMaterial(
         [
-            new THREE.MeshLambertMaterial({
+            new THREE.MeshPhongMaterial({
                 color: 0xffffff,
                 shading: THREE.FlatShading
             }), // front
-            new THREE.MeshLambertMaterial({
+            new THREE.MeshPhongMaterial({
                 color: 0xffffff,
                 shading: THREE.SmoothShading
             }) // side
