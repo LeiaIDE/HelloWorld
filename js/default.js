@@ -13,8 +13,8 @@ function Init() {
     scene = new THREE.Scene();
 
     //manually setup distance, zdp orientation,baseline scale etc
-    _camPosition = {x:0.00,y:0.00,z:500.00};
-    _tarPosition = {x:0.00,y:0.00,z:0.00};
+   // _camPosition = {x:0.00,y:0.00,z:500.00};
+   // _tarPosition = {x:0.00,y:0.00,z:0.00};
     _baselineScale = 1.0;
     _maxDisparity = 5;
     _ZDPSize = 40;
@@ -22,7 +22,8 @@ function Init() {
   
     // camera setup
     camera = new LeiaCamera({
-        cameraPosition: new THREE.Vector3(_camPosition.x, _camPosition.y, _camPosition.z),
+      dCtoZDP:_d,
+      zdpNormal:new THREE.Vector3(_ZDPNormal.x, _ZDPNormal.y, _ZDPNormal.z),
         targetPosition: new THREE.Vector3(_ZDPCenter.x, _ZDPCenter.y, _ZDPCenter.z)
     });
     scene.add(camera);
