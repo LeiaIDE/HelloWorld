@@ -65,7 +65,7 @@ function addObjectsToScene() { // Add your objects here
         width: 40,
         height: 30
     });
-    plane.position.z = -6;
+    plane.position.z = -3;
     plane.castShadow = false;
     plane.receiveShadow = true;
     scene.add(plane);
@@ -74,8 +74,8 @@ function addObjectsToScene() { // Add your objects here
     var helloWorldGeometry = new THREE.TextGeometry(
         "Hello World", {
             size: 4,
-            height: 2,
-            curveSegments: 1,
+            height: 1,
+            curveSegments: 4,
             font: "helvetiker",
             weight: "normal",
             style: "normal",
@@ -113,7 +113,7 @@ function addObjectsToScene() { // Add your objects here
 function addLights() {
     //Add Lights Here
     var spotLight = new THREE.SpotLight(0xffffff);
-    spotLight.position.set(0, 0, 70);
+    spotLight.position.set(0, 70, 70);
     spotLight.shadowCameraVisible = false;
     spotLight.castShadow = true;
     spotLight.shadowMapWidth = spotLight.shadowMapHeight = 256;
