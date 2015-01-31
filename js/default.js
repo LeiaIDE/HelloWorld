@@ -18,7 +18,7 @@ function Init() {
     _baselineScale = 1.0;
     _maxDisparity = 5;
     _ZDPSize = 40;
-     Leia_setDeviceResolution(200,200);
+     Leia_setDeviceResolution(200,150);
   
     // camera setup
     camera = new LeiaCamera({
@@ -63,7 +63,7 @@ function addObjectsToScene() { // Add your objects here
     var plane = Leia_createTexturePlane({
         filename: 'resource/brickwall_900x600_small.jpg',
         width: 40,
-        height: 40
+        height: 30
     });
     plane.position.z = -6;
     plane.castShadow = false;
