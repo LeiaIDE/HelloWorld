@@ -65,8 +65,8 @@ function addObjectsToScene() { // Add your objects here
     // background Plane
     var plane = Leia_createTexturePlane({
         filename: 'resource/brickwall_900x600_small.jpg',
-        width: 40,
-        height: 30
+        width: 44,
+        height: 33
     });
     plane.position.z = -3;
     plane.castShadow = false;
