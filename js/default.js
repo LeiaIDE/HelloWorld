@@ -34,7 +34,7 @@ function Init() {
         renderMode: _renderMode,
         colorMode: _colorMode,
         devicePixelRatio: 1,
-        holoScreenSize: _ZDPSize,
+        ZDPSize: _ZDPSize,
         tunedsp:_maxDisparity,
         holoBaseLineScale:_baselineScale,
         messageFlag: _targetEnvironment
