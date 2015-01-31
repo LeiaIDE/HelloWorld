@@ -15,12 +15,9 @@ function Init() {
     //manually setup distance, zdp orientation,baseline scale etc
    // _camPosition = {x:0.00,y:0.00,z:500.00};
    // _tarPosition = {x:0.00,y:0.00,z:0.00};
-    _baselineScale = undefined;
-    _maxDisparity = undefined;
-    _ZDPSize = undefined;
-    _ZDPDistanceToCamera = undefined;
+
      Leia_setDeviceResolution(200,150);
-    Leia_resetScreenObjectParameters();
+    //Leia_resetScreenObjectParameters();
   
     // camera setup
     camera = new LeiaCamera({
