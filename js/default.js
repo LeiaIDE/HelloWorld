@@ -20,6 +20,7 @@ function Init() {
     _ZDPSize = undefined;
     _ZDPDistanceToCamera = undefined;
      Leia_setDeviceResolution(200,150);
+    Leia_resetScreenObjectParameters();
   
     // camera setup
     camera = new LeiaCamera({
