@@ -1,14 +1,6 @@
 var camera, renderer, scene;
-
-// add your global variables here:
 var helloWorld;
 
-/*head.ready(function() {
-    console.log("head.ready");
-    helloWorld = new THREE.Object3D();
-    Init();
-    animate();
-});*/
 window.onload = function() {
     console.log("head.ready");
     helloWorld = new THREE.Object3D();
