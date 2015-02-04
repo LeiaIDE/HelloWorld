@@ -9,12 +9,12 @@ var helloWorld;
     Init();
     animate();
 });*/
-head.load(["https://s3.amazonaws.com/leiacore/three.min.js", "https://s3.amazonaws.com/leiacore/LeiaCore-latest.min.js", "js/helvetiker_bold.typeface.js", "js/helvetiker_regular.typeface.js"],function() {
+document.onLoad = function() {
     console.log("head.ready");
     helloWorld = new THREE.Object3D();
     Init();
     animate();
-});
+};
 
 function Init() {
     scene = new THREE.Scene();
