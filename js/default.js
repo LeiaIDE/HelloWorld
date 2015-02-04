@@ -9,7 +9,7 @@ var helloWorld;
     Init();
     animate();
 });*/
-document.onLoad = function() {
+window.onload = function() {
     console.log("head.ready");
     helloWorld = new THREE.Object3D();
     Init();
