@@ -22,10 +22,9 @@ function Init() {
   
   // camera setup
   camera = new LeiaCamera({
-    dCtoZDP: _ZDPDistanceToCamera,
-    zdpNormal: new THREE.Vector3(_ZDPNormal.x, _ZDPNormal.y, _ZDPNormal.z),
-    targetPosition: new THREE.Vector3(_ZDPCenter.x, _ZDPCenter.y,
-      _ZDPCenter.z)
+    dCtoZDP: leiaScreen.d,
+    zdpNormal: leiaScreen.normal,
+    targetPosition: leiaScreen.center
   });
   scene.add(camera);
 
@@ -35,9 +34,6 @@ function Init() {
     renderMode: _renderMode,
     colorMode: _colorMode,
     devicePixelRatio: 1,
-    ZDPSize: _ZDPSize,
-    tunedsp: _maxDisparity,
-    holoBaseLineScale: _baselineScale,
     messageFlag: _targetEnvironment
   });
   renderer.shadowMapEnabled = true;
