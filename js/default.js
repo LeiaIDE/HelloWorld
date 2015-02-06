@@ -12,11 +12,17 @@ window.onload = function () {
 function Init() {
  // Leia_resetScreenObjectParameters();
   LEIA.virtualScreen.Init();
-  LEIA.virtualScreen.h = 1/10.0;
-  scene = new THREE.Scene();
-
-  //manually setup distance, zdp orientation,baseline scale etc
+  LEIA.virtualScreen.width = 40;
+  LEIA.virtualScreen.center.copy({x:0.00,y:0.00,z:0.00});
+  LEIA.virtualScreen.normal.copy({x:0.00,y:0.00,z:1.00});
+  LEIA.virtualScreen.b = 1.0;
+  LEIA.virtualScreen.d = 500;
+  LEIA.virtualScreen.disp = 5;
+  LEIA.virtualScreen.h = 0; //1/10.0;
+  
   Leia_setDeviceResolution(200, 150);
+  
+  scene = new THREE.Scene();
   
   // camera setup
   camera = new LeiaCamera({
