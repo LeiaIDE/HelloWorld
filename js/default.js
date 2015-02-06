@@ -12,6 +12,7 @@ window.onload = function () {
 function Init() {
 
   LEIA.virtualScreen.Init();
+  //LEIA.virtualScreen.loadDefault();
   LEIA.virtualScreen.width = 40;
   LEIA.virtualScreen.center.copy({x:0.00,y:0.00,z:0.00});
   LEIA.virtualScreen.normal.copy({x:0.00,y:0.00,z:1.00});
@@ -20,7 +21,8 @@ function Init() {
   LEIA.virtualScreen.disp = 5;
   LEIA.virtualScreen.h = 1/10.0; //1/10.0;
   
-  LEIA.physicalScreen.resolution = new THREE.Vector2(200,200);
+  
+  LEIA.physicalScreen.resolution = new THREE.Vector2(200,150);
   
   scene = new THREE.Scene();
   
@@ -60,7 +62,9 @@ function animate() {
 
   helloWorld.rotation.x = 0.8 * Math.sin(5.0 * LEIA.time);
   helloWorld.rotation.z = 0.6 * 0.6 * Math.sin(3.0 * LEIA.time);
-
+  
+  LEIA.virtualScreen.center.copy({x:0.00,y:0.00,z:Math.sin(5.0 * LEIA.time)});
+  
   renderer.Leia_render({
     scene: scene,
     camera: camera
