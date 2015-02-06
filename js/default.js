@@ -10,7 +10,7 @@ window.onload = function () {
 };
 
 function Init() {
- // Leia_resetScreenObjectParameters();
+
   LEIA.virtualScreen.Init();
   LEIA.virtualScreen.width = 40;
   LEIA.virtualScreen.center.copy({x:0.00,y:0.00,z:0.00});
@@ -18,10 +18,9 @@ function Init() {
   LEIA.virtualScreen.b = 1.0;
   LEIA.virtualScreen.d = 500;
   LEIA.virtualScreen.disp = 5;
-  LEIA.virtualScreen.h = 0; //1/10.0;
+  LEIA.virtualScreen.h = 1/10.0; //1/10.0;
   
   LEIA.physicalScreen.resolution = new THREE.Vector2(200,200);
-  //Leia_setDeviceResolution(200, 200);
   
   scene = new THREE.Scene();
   
