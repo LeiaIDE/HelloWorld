@@ -11,7 +11,7 @@ window.onload = function () {
 };
 
 function Init() {
-  Leia_resetScreenObjectParameters();
+ // Leia_resetScreenObjectParameters();
   leiaDisplay = new LeiaPhysicalScreen();
   leiaScreen = new LeiaVirtualScreen(_ZDPSize, _maxDisparity, _baselineScale, _ZDPDistanceToCamera, _ZDPNormal, _ZDPCenter);
   
@@ -19,8 +19,7 @@ function Init() {
 
   //manually setup distance, zdp orientation,baseline scale etc
   Leia_setDeviceResolution(200, 150);
-  //Leia_resetScreenObjectParameters();
-
+  
   // camera setup
   camera = new LeiaCamera({
     dCtoZDP: _ZDPDistanceToCamera,
