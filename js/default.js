@@ -60,7 +60,7 @@ function animate() {
   helloWorld.rotation.z = 0.6 * 0.6 * Math.sin(3.0 * LEIA.time);
   
   LEIA.virtualScreen.center.copy({x:0.00,y:0.00,z:Math.sin(5.0 * LEIA.time)});
-  
+  LEIA.virtualScreen.width = 40 + Math.sin(5.0 * LEIA.time)*20;
   renderer.Leia_render({
     scene: scene,
     camera: camera
