@@ -1,7 +1,6 @@
 var camera, renderer, scene;
 var helloWorld;
-var leiaDisplay;
-var virtualScreen;
+
 
 window.onload = function () {
   console.log("head.ready");
@@ -12,9 +11,7 @@ window.onload = function () {
 
 function Init() {
  // Leia_resetScreenObjectParameters();
-  leiaDisplay = new LeiaPhysicalScreen();
-  virtualScreen = new LeiaVirtualScreen(_ZDPSize, _maxDisparity, _baselineScale, _ZDPDistanceToCamera, _ZDPNormal, _ZDPCenter);
-  
+   LEIA.virtualScreen.Init();
   scene = new THREE.Scene();
 
   //manually setup distance, zdp orientation,baseline scale etc
@@ -22,9 +19,9 @@ function Init() {
   
   // camera setup
   camera = new LeiaCamera({
-    dCtoZDP: virtualScreen.d,
-    zdpNormal: virtualScreen.normal,
-    targetPosition: virtualScreen.center
+    dCtoZDP: LEIA.virtualScreen.d,
+    zdpNormal: LEIA.virtualScreen.normal,
+    targetPosition: LEIA.virtualScreen.center
   });
   scene.add(camera);
 
