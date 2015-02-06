@@ -46,8 +46,6 @@ function Init() {
   Leia_addRender(renderer, {
     bFPSVisible: true
   });
-  
-  
 
   //add object to scene
   addObjectsToScene();
