@@ -12,7 +12,7 @@ window.onload = function () {
 
 function Init() {
   leiaDisplay = new LeiaPhysicalScreen();
-
+  leiaScreen = new LeiaVirtualScreen(_ZDPSize, _maxDisparity, _baselineScale, _ZDPDistanceToCamera, _ZDPNormal, _ZDPCenter);
   
   scene = new THREE.Scene();
 
@@ -52,7 +52,7 @@ function Init() {
     bFPSVisible: true
   });
   
-  leiaScreen = new LeiaVirtualScreen(_ZDPSize, _maxDisparity, _baselineScale, _ZDPDistanceToCamera, _ZDPNormal, _ZDPCenter);
+  
 
   //add object to scene
   addObjectsToScene();
