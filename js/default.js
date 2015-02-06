@@ -11,7 +11,8 @@ window.onload = function () {
 
 function Init() {
  // Leia_resetScreenObjectParameters();
-   LEIA.virtualScreen.Init();
+  LEIA.virtualScreen.Init();
+  LEIA.virtualScreen.h = 1/10.0;
   scene = new THREE.Scene();
 
   //manually setup distance, zdp orientation,baseline scale etc
