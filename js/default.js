@@ -61,6 +61,8 @@ function animate() {
   
   LEIA.virtualScreen.center.copy({x:0.00,y:0.00,z:Math.sin(5.0 * LEIA.time)});
   LEIA.virtualScreen.width = 40 + Math.sin(5.0 * LEIA.time)*20;
+  LEIA.virtualScreen.b = 1.0 + Math.sin(5.0 * LEIA.time);
+  LEIA.virtualScreen.disp = 5 + 2*Math.sin(5.0 * LEIA.time);
   renderer.Leia_render({
     scene: scene,
     camera: camera
