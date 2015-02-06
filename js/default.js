@@ -1,5 +1,7 @@
 var camera, renderer, scene;
 var helloWorld;
+var leiaDisplay;
+var leiaScreen;
 
 window.onload = function () {
   console.log("head.ready");
@@ -9,6 +11,9 @@ window.onload = function () {
 };
 
 function Init() {
+  leiaDisplay = new LeiaPhysicalScreen();
+
+  
   scene = new THREE.Scene();
 
   //manually setup distance, zdp orientation,baseline scale etc
@@ -46,6 +51,8 @@ function Init() {
   Leia_addRender(renderer, {
     bFPSVisible: true
   });
+  
+  leiaScreen = new LeiaVirtualScreen(_ZDPSize, _maxDisparity, _baselineScale, _ZDPDistanceToCamera, _ZDPNormal, _ZDPCenter);
 
   //add object to scene
   addObjectsToScene();
