@@ -11,18 +11,13 @@ window.onload = function () {
 };
 
 function Init() {
+  Leia_resetScreenObjectParameters();
   leiaDisplay = new LeiaPhysicalScreen();
   leiaScreen = new LeiaVirtualScreen(_ZDPSize, _maxDisparity, _baselineScale, _ZDPDistanceToCamera, _ZDPNormal, _ZDPCenter);
   
   scene = new THREE.Scene();
 
   //manually setup distance, zdp orientation,baseline scale etc
-  //   _ZDPNormal = {x:0.00,y:0.00,z:1.00};
-  //    _ZDPDistanceToCamera = 500.00;
-  //   _ZDPCenter = {x:0.00,y:0.00,z:0.00};
-  //   _ZDPSize = 40.00;
-  //    _maxDisparity = 5.00;
-  //    _baselineScale = 1.00;
   Leia_setDeviceResolution(200, 150);
   //Leia_resetScreenObjectParameters();
 
@@ -66,6 +61,7 @@ function animate() {
 
   helloWorld.rotation.x = 0.8 * Math.sin(5.0 * LEIA.time);
   helloWorld.rotation.z = 0.6 * 0.6 * Math.sin(3.0 * LEIA.time);
+  leiaScreen.width = leiaScreen.width;
   renderer.Leia_render({
     scene: scene,
     camera: camera
