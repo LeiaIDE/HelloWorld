@@ -1,7 +1,7 @@
 var camera, renderer, scene;
 var helloWorld;
 var leiaDisplay;
-var leiaScreen;
+var virtualScreen;
 
 window.onload = function () {
   console.log("head.ready");
@@ -13,7 +13,7 @@ window.onload = function () {
 function Init() {
  // Leia_resetScreenObjectParameters();
   leiaDisplay = new LeiaPhysicalScreen();
-  leiaScreen = new LeiaVirtualScreen(_ZDPSize, _maxDisparity, _baselineScale, _ZDPDistanceToCamera, _ZDPNormal, _ZDPCenter);
+  virtualScreen = new LeiaVirtualScreen(_ZDPSize, _maxDisparity, _baselineScale, _ZDPDistanceToCamera, _ZDPNormal, _ZDPCenter);
   
   scene = new THREE.Scene();
 
@@ -22,9 +22,9 @@ function Init() {
   
   // camera setup
   camera = new LeiaCamera({
-    dCtoZDP: leiaScreen.d,
-    zdpNormal: leiaScreen.normal,
-    targetPosition: leiaScreen.center
+    dCtoZDP: virtualScreen.d,
+    zdpNormal: virtualScreen.normal,
+    targetPosition: virtualScreen.center
   });
   scene.add(camera);
 
@@ -56,7 +56,7 @@ function animate() {
 
   helloWorld.rotation.x = 0.8 * Math.sin(5.0 * LEIA.time);
   helloWorld.rotation.z = 0.6 * 0.6 * Math.sin(3.0 * LEIA.time);
-  leiaScreen.width = leiaScreen.width;
+
   renderer.Leia_render({
     scene: scene,
     camera: camera
