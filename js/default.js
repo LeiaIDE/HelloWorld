@@ -38,6 +38,7 @@ function Init() {
     renderMode: _renderMode,
     colorMode: _colorMode,
     devicePixelRatio: 1,
+    superSampleSharpen:false,
     messageFlag: _targetEnvironment
   });
   renderer.shadowMapEnabled = true;
