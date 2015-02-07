@@ -18,7 +18,7 @@ function Init() {
   LEIA.virtualScreen.b = 1.0;
   LEIA.virtualScreen.d = 500;
   LEIA.virtualScreen.disp = 5;
-  LEIA.virtualScreen.h = 1/10.0; //1/10.0;
+  LEIA.virtualScreen.h = 1/10.0; 
   
   LEIA.physicalScreen.resolution = new THREE.Vector2(200,150);
   
