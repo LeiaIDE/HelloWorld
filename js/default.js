@@ -3,16 +3,18 @@ var helloWorld;
 
 
 window.onload = function () {
-  helloWorld = new THREE.Object3D();
-  Init();
-  animate();
+  LEIA.physicalScreen.InitFromExternalJson('https://s3.amazonaws.com/leiacore/config.json',function(){
+    helloWorld = new THREE.Object3D();
+    Init();
+    animate();
+  });
 };
 
 function Init() {
 
   LEIA.virtualScreen.Init();
   //LEIA.virtualScreen.loadDefault();
-  LEIA.physicalScreen.InitFromExternalJson('https://s3.amazonaws.com/leiacore/config.json');
+  
   LEIA.virtualScreen.width = 40;
   LEIA.virtualScreen.center.copy({x:0.00,y:0.00,z:0.00});
   LEIA.virtualScreen.normal.copy({x:0.00,y:0.00,z:1.00});
@@ -20,7 +22,6 @@ function Init() {
   LEIA.virtualScreen.d = 500;
   LEIA.virtualScreen.disp = 5;
   LEIA.virtualScreen.h = 1/10.0; 
-  
   LEIA.physicalScreen.resolution = new THREE.Vector2(200,150);
   
   scene = new THREE.Scene();
