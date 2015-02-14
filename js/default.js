@@ -22,8 +22,9 @@ function Init() {
   LEIA.virtualScreen.d = 500;
   LEIA.virtualScreen.disp = 5;
   LEIA.virtualScreen.h = 1/10.0; 
+  LEIA.virtualScreen.setShiftXY(4,3);
   LEIA.physicalScreen.resolution = new THREE.Vector2(200,150);
-  Leia_setShiftXY(4,2);
+
   scene = new THREE.Scene();
   
   // camera setup
